@@ -1,3 +1,7 @@
+Original repository is [udzura/dokku-timezone-plugin](https://github.com/udzura/dokku-timezone-plugin).
+
+---
+
 dokku-timezone-plugin
 =====================
 
@@ -6,11 +10,9 @@ A plugin to set timezone on buildstep image created
 ## Install
 
 ```bash
-$ cd /var/lib/dokku/plugins
-$ git clone https://github.com/udzura/dokku-timezone-plugin.git timezone
+$ dokku plugin:install https://github.com/yskoht/dokku-timezone-plugin
 ```
 
-* No `plugins-install` command needed
 * Detecting timezone via `/etc/timezone` on dokku host.
 
 ```shell-session
@@ -42,8 +44,3 @@ export TIMEZONE=Asia/Tokyo
 
 This plugin requires `/etc/timezone` file. So may work well onlly on Ubuntu/Debian.
 
-## FAQ
-
-### Do you know `TZ` environment variable?
-
-Yes! But we sometimes forget to set `TZ`. This plugin helps you from such situation.
